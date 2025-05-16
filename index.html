@@ -71,7 +71,7 @@
 
     <button id="addSubjectBtn">Add Subject</button>
     <button id="removeSubjectBtn">Remove Subject</button>
-    <button id="calculateBtn">Calculate CGPA</button>
+    <button id="calculateBtn">Calculate SGPA</button>
 
     <h2 id="result"></h2>
   </div>
@@ -148,8 +148,8 @@
       if (totalCredits === 0) {
         result.textContent = "Please enter valid data!";
       } else {
-        const cgpa = (totalPoints / totalCredits).toFixed(2);
-        result.textContent = `Your CGPA is: ${cgpa}`;
+        const sgpa = (totalPoints / totalCredits).toFixed(2);
+        result.textContent = `Your SGPA is: ${sgpa}`;
       }
     });
   </script>
