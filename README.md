@@ -1,1 +1,1 @@
-# CGPA-Calculator
+# SGPA-Calculator
