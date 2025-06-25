@@ -53,18 +53,25 @@ calculateBtn.addEventListener('click', () => {
   let totalPoints = 0;
   let totalCredits = 0;
 
-  subjects.forEach(sub => {
+  for (let sub of subjects) {
     const select = sub.querySelector('select');
     const input = sub.querySelector('input');
     const grade = select.value;
     const credit = parseFloat(input.value);
 
-    if (gradePoints.hasOwnProperty(grade) && !isNaN(credit)) {
+    if (isNaN(credit)) continue;
+
+    if (credit < 0) {
+      result.textContent = "Negative credit values are not accepted!";
+      return;
+    }
+
+    if (gradePoints.hasOwnProperty(grade)) {
       const gradePoint = gradePoints[grade];
       totalPoints += gradePoint * credit;
       totalCredits += credit;
     }
-  });
+  }
 
   if (totalCredits === 0) {
     result.textContent = "Please enter valid data!";
