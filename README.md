@@ -1,2 +1,2 @@
 # SGPA-Calculator
-https://github.com/jairajrenjith/SGPA-Calculator
+https://jairajrenjith.github.io/SGPA-Calculator/
